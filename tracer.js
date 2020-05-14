@@ -16,7 +16,8 @@ const provider = new NodeTracerProvider({
     },
     express: {
       enabled: true,
-      path: '@opentelemetry/plugin-express'
+      path: '@opentelemetry/plugin-express',
+      port: 9411
     }
   }
 });
