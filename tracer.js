@@ -16,8 +16,7 @@ const provider = new NodeTracerProvider({
     },
     express: {
       enabled: true,
-      path: '@opentelemetry/plugin-express',
-      port: 9411
+      path: '@opentelemetry/plugin-express'
     }
   }
 });
@@ -25,7 +24,8 @@ const provider = new NodeTracerProvider({
 provider.register();
 
 let exporter = new JaegerExporter({
-    serviceName: 'front-end'
+    serviceName: 'front-end',
+    port: 6832
 })
 
 provider.addSpanProcessor(new SimpleSpanProcessor(exporter));
