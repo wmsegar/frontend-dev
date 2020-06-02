@@ -1,4 +1,5 @@
 'use strict';
+const tracer = require('dd-trace').init()
 const opentelemetry = require('@opentelemetry/api');
 const { NodeTracerProvider } = require('@opentelemetry/node');
 const { SimpleSpanProcessor } = require('@opentelemetry/tracing');
